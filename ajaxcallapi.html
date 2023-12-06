@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    
+    <style>
+        #d1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #d1 li{
+            width: 200px;
+            list-style: none;
+            /* padding: 10px; */
+            font-size: 20px;
+            border: 1px solid;
+            margin: 10px;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 5px 5px 5px 5px;
+        }
+        #d1 li img{
+            width: 100%;
+            display: block;
+        }
+    </style>
+    
+    </head>
+    <body>
+
+
+
+
+
+        <button onclick="getData()">on clock</button>
+        <!-- <button onclick="getcats()">cats</button> -->
+
+       <ul id="d1">
+
+       </ul>
+          
+
+
+
+
+
+        <script>
+            function getData(){
+                $.get("https://restcountries.com/v3.1/all",function(countries,b){
+                    console.log(countries)
+                   countries.forEach(function(country){
+                    var newli=document.createElement("li");
+                    var cn = document.createElement("h5");
+                    cn.innerHTML = country.name.common;
+                    newli.appendChild(cn)
+                    var cp = document.createElement("div");
+                    cp.innerHTML = "population :"+country.population;
+                    newli.appendChild(cp);
+                    var cc = document.createElement("div");
+                    cc.innerHTML = "Capital :"+country.name.capital;
+                    newli.appendChild(cc)
+                    var flg = document.createElement("img");
+                    flg.src = country.flags.svg;
+                    newli.appendChild(flg)
+                    document.getElementById("d1").appendChild(newli)
+                   })
+ 
+                })  
+            }
+
+            // function getcats(){
+            //     $.get("https://cataas.com/api/cats",function(cats,status){
+            //         console.log(cats)
+            //         console.log(status)
+            //     })
+            // }
+        </script>   
+    </body>  
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // ================ using the obj literal ===========
+
+    //  var user={
+    //     firstName:"sivaji",
+    //     lastName:"rao",
+    //     email:"sivajirao948@gmail.com",
+    //     id:121,
+    //     getemail:function(){
+    //         return this.firstName+" "+this.email
+    //         return this.email
+    //         return this.id
+    //         return this.email
+    //     }
+
+    //  }
+    //  console.log(user);
+    //  console.log(user.email);
+    //  console.log(user.getid())
+    //  console.log(user.getfullName())
+    // console.log(user)
+    // console.log(this.getemail);
+
+
+    // ==============  constructor ===================
+
+    // function user(firstName,lastName,emailId, age){
+    //     this.firstName=firstName;
+    //     this.lastName=lastName;
+    //     this.emailId=emailId;
+    //     this.age=age;
+    // }
+    // var user1=new user("ramesh","rao","ramesh@gmail.com",25)
+    // var user2=new user("sivaji","rao","ramesh@gmail.com",25)
+    // var user3=new user("BEEBI","shaik","ramesh@gmail.com",25)
+    // var user4=new user("Amani","bbbbb","ramesh@gmail.com",25)
+    // console.log(user1);
+    // console.log(user2);
+    // console.log(user3);
+    // console.log(user4); 
+
+
+
+    // ================ using the object create()method ============================
+
+    // var user={
+    //     firstName:"sivaji",
+    //     lastName:"rao",
+    //     email:"sivajirao948@gmail.com",
+    //     id:121,
+    //     getfullName:function(){
+    //         return this.firstName+" "+this.lastName
+            
+    //     }
+    // }
+    // let user1=Object.create(user)
+    // console.log(user1.firstName);
+    // console.log(user1.lastName);
+    // console.log(user1.getfullName());
+
+
+
+
+    // ===================== Es6 using the class methods =============
+
+    // class user{
+    //     constructor(firstName,lastName,emailID,age){
+    //         this.firstName = firstName;
+    //         this.lastName = lastName;
+    //         this.emailID = emailID;
+    //         this.age = age;
+    //     }
+    //     getfirstName(){
+    //       return this.firstName;
+    //     }
+    //     getlastName(){
+    //         return this.lastName;
+    //     }
+    //     getfullName(){
+    //         return this.firstName +" "+ this.lastName;
+    //     }
+        
+    // }
+
+
+    // let user1 =new user("ramesh","rao","ramesh@gmail.com",25);
+    
+    // console.log(user1)
+    // console.log(user.getfullName)
+
+
+
+// 1. write a program to check a number is divisible bt 7 or not
+
+
+   var i=1;
+   var n=7;
+   while(i<=n){
+    if(i%n==0){
+        console.log("yes the number is divisibl eby 7")
+    }
+    else{
+        console.log("no rhe given numbeer not divisible by 7 ")
+    }
+   }
+
+
+
+
+
+
+        
+    
+
+
+
+
+    </script>
+</body>
+</html>
